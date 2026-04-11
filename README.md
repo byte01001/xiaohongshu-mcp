@@ -1,35 +1,10 @@
 # xiaohongshu-mcp
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-27-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
-[![善款已捐](https://img.shields.io/badge/善款已捐-CNY%201810.00-brightgreen?style=flat-square)](./DONATIONS.md)
-[![爱心汇聚](https://img.shields.io/badge/爱心汇聚-CNY%201524.64-blue?style=flat-square)](./DONATIONS.md)
 [![Docker Pulls](https://img.shields.io/docker/pulls/byte01001/xiaohongshu-mcp?style=flat-square&logo=docker)](https://hub.docker.com/r/byte01001/xiaohongshu-mcp)
 
 MCP for 小红书 / xiaohongshu.com。让你的 AI 助手直接访问小红书数据。
 
 GitHub 主页: `https://github.com/byte01001/xiaohongshu-mcp.git`
-
-### 🚀 快速开始：选择最适合你的版本
-
-> [!IMPORTANT]
-> #### 🔥 方案 A：Openclaw 深度集成 (推荐给开发者)
-> - **Openclaw 太火啦 🔥🔥🔥 ，新增 Openclaw 支持，分为两种，请各位按需使用：**
-> - [xiaohongshu-mcp-skills](https://github.com/autoclaw-cc/xiaohongshu-mcp-skills)（适用于已部署完本项目的用户）
-> - [xiaohongshu-skills](https://github.com/autoclaw-cc/xiaohongshu-skills)（开箱即用版）
-
-> [!TIP]
-> #### ✨ 方案 B：x-mcp 浏览器插件版 (推荐给非技术同学 / 追求极简的用户)
-> - **不想折腾 Docker 或部署环境？试试：[byte01001/x-mcp](https://github.com/byte01001/x-mcp)**
-> - **零配置**：安装插件即用，无需任何代码、代理或复杂的环境配置。
-> - **安全稳定**：直接在常用浏览器 (Chrome/Edge) 及本地网络运行，无服务器 IP 风险，且能解决 90% 的部署报错。
-
-### 📖 相关资源
-
-- **我的博客文章**：[yougan.cc/xiaohongshu-mcp](https://www.yougan.cc/xiaohongshu-mcp)
-- **贡献指南**：[Contributing Guide](./CONTRIBUTING.md)
 
 ### 🛠️ 疑难杂症
 
@@ -41,16 +16,7 @@ GitHub 主页: `https://github.com/byte01001/xiaohongshu-mcp.git`
 
 [![Star History Chart](https://api.star-history.com/svg?repos=byte01001/xiaohongshu-mcp&type=Timeline)](https://www.star-history.com/#byte01001/xiaohongshu-mcp&Timeline)
 
-## 赞赏支持
 
-本项目所有的赞赏都会用于慈善捐赠。所有的慈善捐赠记录，请参考 [DONATIONS.md](./DONATIONS.md)。
-
-**捐赠时，请备注 MCP 以及名字。**
-如需更正/撤回署名，请开 Issue 或通过邮箱联系。
-
-**微信：**
-
-<img src="donate/wechat@2x.png" alt="WeChat Pay QR" width="260" />
 
 ## 项目简介
 
@@ -99,25 +65,6 @@ https://github.com/user-attachments/assets/bd9a9a4a-58cb-4421-b8f3-015f703ce1f9
 - ✅ 上传速度更快
 - ✅ 避免图片链接失效问题
 - ✅ 支持更多图片格式
-
-**发布图文帖子演示：**
-
-https://github.com/user-attachments/assets/8aee0814-eb96-40af-b871-e66e6bbb6b06
-
-</details>
-
-<details>
-<summary><b>3. 发布视频内容</b></summary>
-
-支持发布视频内容到小红书，包括标题、内容描述和本地视频文件。
-
-**视频支持方式：**
-
-仅支持本地视频文件绝对路径：
-
-```
-"/Users/username/Videos/video.mp4"
-```
 
 **功能特点：**
 
@@ -883,39 +830,6 @@ npx mcporter list xiaohongshu-mcp
   - `unfavorite`: 是否取消收藏（可选），true 为取消收藏，默认为收藏
 - `user_profile` - 获取用户个人主页信息（必需：user_id, xsec_token）
 
-### 2.4. 使用示例
-
-使用 Claude Code 发布内容到小红书：
-
-**示例 1：使用 HTTP 图片链接**
-
-```
-帮我写一篇帖子发布到小红书上，
-配图为：https://cn.bing.com/th?id=OHR.MaoriRock_EN-US6499689741_UHD.jpg&w=3840
-图片是："纽西兰陶波湖的Ngātoroirangi矿湾毛利岩雕（© Joppi/Getty Images）"
-
-使用 xiaohongshu-mcp 进行发布。
-```
-
-**示例 2：使用本地图片路径（推荐）**
-
-```
-帮我写一篇关于春天的帖子发布到小红书上，
-使用这些本地图片：
-- /Users/username/Pictures/spring_flowers.jpg
-- /Users/username/Pictures/cherry_blossom.jpg
-
-使用 xiaohongshu-mcp 进行发布。
-```
-
-**示例 3：发布视频内容**
-
-```
-帮我写一篇关于美食制作的视频发布到小红书上，
-使用这个本地视频文件：
-- /Users/username/Videos/cooking_tutorial.mp4
-
-使用 xiaohongshu-mcp 的视频发布功能。
 ```
 
 ![claude-cli 进行发布](./assets/claude_push.gif)
@@ -954,15 +868,6 @@ npx mcporter list xiaohongshu-mcp
 5. 确认 **图片路径中没有中文字符**。
 6. 若使用网络图片地址，请确认 **图片链接可正常访问**。
 
----
-
-**Q:** 在设备上运行 MCP 程序出现闪退如何解决？
-**A:**
-
-1. 建议 **从源码安装**。
-2. 或使用 **Docker 安装 xiaohongshu-mcp**，教程参考：
-   - [使用 Docker 安装 xiaohongshu-mcp](https://github.com/byte01001/xiaohongshu-mcp#:~:text=%E6%96%B9%E5%BC%8F%E4%B8%89%EF%BC%9A%E4%BD%BF%E7%94%A8%20Docker%20%E5%AE%B9%E5%99%A8%EF%BC%88%E6%9C%80%E7%AE%80%E5%8D%95%EF%BC%89)
-   - [X-MCP 项目页面](https://github.com/byte01001/x-mcp/)
 
 ---
 
@@ -985,28 +890,3 @@ npx mcporter list xiaohongshu-mcp
 2. **[Cherry Studio 完整配置教程](./examples/cherrystudio/README.md)** - AI 客户端完美接入
 3. **[Claude Code + Kimi K2 接入教程](./examples/claude-code/claude-code-kimi-k2.md)** - Claude Code 门槛太高，那么就接入 Kimi 国产大模型吧～
 4. **[AnythingLLM 完整指南](./examples/anythingLLM/readme.md)** - AnythingLLM 是一款 all-in-one 多模态 AI 客户端，支持 workflow 定义，支持多种大模型和插件扩展。
-
-> 🎯 **提示**: 点击上方链接查看详细的图文教程，快速上手各种集成方案！
->
-> 📢 **欢迎贡献**: 如果你有新的集成案例，欢迎提交 PR 分享给社区！
-
-## 4. 小红书 MCP 互助群
-
-**重要：在群里问问题之前，请一定要先仔细看完 README 文档以及查看 Issues。**
-
-### 微信群
-|                                                 微信群 20 群                                        |                                                 微信群 21 群                                         |
-| :------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------: |
-| <img src="https://github.com/user-attachments/assets/16d8fe15-bcc2-40d3-81ae-47360d0d2c10" alt="WechatIMG119" width="300"> | <img src="https://github.com/user-attachments/assets/b7d88fd3-a0e2-43e1-a3bd-0c4345a1c9b9" alt="WechatIMG119" width="300"> |
-
-### 飞书群
-
-|                                                         飞书 1 群                                                         |                                                         飞书 2 群                                                         |                                                         飞书 3 群                                                         |                                                         飞书 4 群                                                         |
-| :-----------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------: |
-| <img src="https://github.com/user-attachments/assets/65579771-3543-4661-9b48-def48eed609b" alt="qr-feishu01" width="260"> | <img src="https://github.com/user-attachments/assets/4983ea42-ce5b-4e26-a8c0-33889093b579" alt="qr-feishu02" width="260"> | <img src="https://github.com/user-attachments/assets/c77b45da-6028-4d3a-b421-ccc6c7210695" alt="qr-feishu03" width="260"> | <img src="https://github.com/user-attachments/assets/c42f5595-71cd-4d9b-b7f8-0c333bd25e2b" alt="qr-feishu04" width="260"> |
-
-> **注意：**
->
-> 1. 微信群的二维码有时间限制，有时候忘记更新，麻烦等待更新或者提交 Issue 催我更新。
-> 2. 飞书群，如果有的群满了，可以尝试扫一下另外一个群，总有坑位。
-
